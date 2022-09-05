@@ -6,7 +6,7 @@ import { galleryItems } from './gallery-items';
 
 console.log(galleryItems);
 
-const galleryList = document.querySelector(".gallery");
+const galleryList = document.querySelector('.gallery');
 
 function onElementsCreate(galleryItems) {
   return galleryItems
@@ -15,15 +15,15 @@ function onElementsCreate(galleryItems) {
     <img class="gallery__image" src="${preview}" alt="${description}"/>
  </a></li>`;
     })
-    .join("");
+    .join('');
 }
 
 const galleryElements = onElementsCreate(galleryItems);
-galleryList.insertAdjacentHTML("beforeend", galleryElements);
+galleryList.insertAdjacentHTML('beforeend', galleryElements);
 galleryList.style.listStyle = 'none';
 
-let lightbox = new SimpleLightbox(".gallery a", {
-  sourceAttr: "href",
-  captionsData: "alt",
+let lightbox = new SimpleLightbox('.gallery a', {
+  sourceAttr: 'href',
+  captionsData: 'alt',
   captionDelay: 250,
 });
